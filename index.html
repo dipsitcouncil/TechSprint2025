@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TECH SPRINT 2025</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        h1, h2, p, a, label, input, textarea, button {
+            color: #fff !important;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navbar {
+            background-color: transparent !important;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 0.8s ease;
+        }
+
+        .navbar.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .nav-link {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #1F51FF, #00FFFF);
+            transition: width 0.4s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link.active {
+            color: #00FFFF !important;
+        }
+
+        .hero-container {
+            padding: 10rem;
+            font-family: "Michroma", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+        }
+
+        .form-control, .form-control:focus {
+            background-color: rgba(255,255,255,0.05);
+            border: 1px solid #555;
+            color: #fff;
+        }
+
+        /* Gallery styling */
+        .gallery-img-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+            margin-bottom: 1rem;
+        }
+        .gallery-img-container {
+            margin-bottom: 4rem; /* increase to 1.5rem if needed */
+            padding: 0.3rem; /* adds internal spacing */
+        }
+
+        .gallery-img-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0.5rem;
+        }
+
+        .gallery-overlay h5,
+        .gallery-overlay p,
+        .gallery-overlay small {
+            margin: 0;
+            padding: 0.2rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #00ffff, #1f51ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+}
+
+
+
+    </style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particles background -->
+    <div id="particles-js" style="position: fixed; width: 100%; height: 100%; z-index: -1;"></div>
+
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand gradient-text mb-3 fs-4" href="#">Tech Sprint '25</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav" style="font-size: smaller;">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link fs-4" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link fs-4" href="#events">Events</a></li>
+                    <li class="nav-item"><a class="nav-link fs-4" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section style="font-family: Michroma, sans-serif" class="vh-100 d-flex flex-column align-items-center justify-content-center text-center p-0 m-0">
+        <span class="badge bg-dark text-light rounded-pill px-3 py-2 fw-semibold shadow-sm" style="margin: 0; line-height: 1;">
+            DELHI PUBLIC SCHOOL, BANGALORE SOUTH
+        </span>
+        <div style="line-height: 0; margin: 0; padding: 0;">
+            <img src="logo.png" alt="DPS Tech Sprint Logo" class="img-fluid"
+                 style="max-height: 700px; filter: drop-shadow(0 0 15px #00ffff); display: block; margin: 0; padding: 0;">
+        </div>
+        <div class="d-flex justify-content-center align-items-center gap-2" style="margin: 0; padding: 0; line-height: 1;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#00FFFF" class="bi bi-calendar-event" viewBox="0 0 16 16">
+                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h.5A1.5 1.5 0 0 1 15 2.5V4H1V2.5A1.5 1.5 0 0 1 2.5 1H3v-.5a.5.5 0 0 1 .5-.5zM1 5v8.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5V5H1zm3 2a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 7zm0 2a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 4 9z"/>
+            </svg>
+            <span class="fs-4" style="margin: 0; padding: 0;">1st & 2nd August 2025</span>
+        </div>
+    </section>
+    
+
+
+    <!-- About -->
+    <section id="about" class="container py-5">
+        <div class="fade-in text-center">
+            <h2 class="display-2 fw-bold gradient-text mb-3" style="font-family: Michroma, sans-serif">About Tech Sprint</h2>
+            <p style="font-family: Michroma, sans-serif">DPS Bangalore South proudly presents Tech Sprint 2025, the ultimate celebration of technology, creativity, and future-forward thinking. Designed to ignite young minds and showcase student innovation, this dynamic tech fest features a wide range of events — from coding challenges to Gaming, Video Editing and more.
+
+Open to students from Classes 9 to 12, Tech Sprint 2025 is more than just a competition — it's a platform to explore, experiment, and excel in the world of technology. Whether you're a budding coder, a design enthusiast, a tech tinkerer, or just curious about the digital world, there’s something for everyone.
+
+Get ready to ideate, build, and sprint towards the future — because at Tech Sprint 2025, the next big idea could be yours!</p>
+        </div>
+    </section>
+
+    <!-- Events (Gallery) -->
+    <section id="events" class="container py-5" style="font-family: Michroma, sans-serif" >
+        <div class="fade-in text-center mb-4">
+            <h2 class="display-2 fw-bold gradient-text mb-3" style=" font-family: Michroma, sans-serif;">Events</h2>
+        </div>
+        <div class="row gy-4 gx-4">
+            <div class="col-md-4 fade-in">
+                <a href="codejam.html" style="text-decoration: none;">
+                    <div class="gallery-img-container">
+                        <img src="codejam.jpeg" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h5 style="color: cyan; font-weight: bold;">Code Jam</h5>
+                            <p style="font-weight: bold;">Competitive Coding</p>
+                     
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 fade-in">
+                <a href="valorant.html" style="text-decoration: none;">
+                    <div class="gallery-img-container">
+                        <img src="valo.png" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h5 style="color: cyan; font-weight: bold;">Valorant</h5>
+                            <p style="font-weight: bold;">PC Gaming</p>
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 fade-in">
+                <a href="minecraft.html" style="text-decoration: none;">
+                    <div class="gallery-img-container">
+                        <img src="mine.webp" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h5 style="color: cyan; font-weight: bold;">Block Wars</h5>
+                            <p style="font-weight: bold;">Minecraft Challenge</p>
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 fade-in">
+                <a href="editing.html" style="text-decoration: none;">
+                    <div class="gallery-img-container">
+                        <img src="edit.jpeg" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h5 style="color: cyan; font-weight: bold;">Pixel Motion</h5>
+                            <p style="font-weight: bold;">Video editing</p>
+                          
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 fade-in">
+                <a href="cyberquest.html" style="text-decoration: none;">
+                    <div class="gallery-img-container">
+                        <img src="cyb.png" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h5 style="color: cyan; font-weight: bold;">Cyber Quest</h5>
+                            <p style="font-weight: bold;">Treasure Hunt</p>
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 fade-in">
+                <a href="cap.html" style="text-decoration: none;">
+                    <div class="gallery-img-container">
+                        <img src="cap.jpg" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h5 style="color: cyan; font-weight: bold;">Code2Capital</h5>
+                            <p style="font-weight: bold;">Innovation</p>
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue text-white text-center p-3">
+        © 2025 DPS Bangalore South. All rights reserved. <br> Website Made by Aarul Tiwari <br> Graphics by Manoj Raj
+    </footer>
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
