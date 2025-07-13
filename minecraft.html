@@ -42,13 +42,22 @@
         .nav-link.active {
             color: #00FFFF !important;
         }
-        .hero-container {
-            padding: 2rem;
-        }
         .gradient-text {
             background: linear-gradient(90deg, #00ffff, #1f51ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+        .glass-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid #00ffff50;
+            border-radius: 12px;
+            padding: 1.5rem;
+            backdrop-filter: blur(4px);
+        }
+        .img-fluid {
+            border-radius: 12px;
+            max-height: 100%;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -56,10 +65,10 @@
     <!-- Particles background -->
     <div id="particles-js" style="position: fixed; width: 100%; height: 100%; z-index: -1;"></div>
 
-    <!-- Header -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand gradient-text mb-3 fs-4" href="#">Tech Sprint</a>
+            <a class="navbar-brand gradient-text fs-4" href="index.html">Tech Sprint</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -73,19 +82,56 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section style="font-family: Michroma, sans-serif"class="vh-100 d-flex align-items-center justify-content-center text-center">
-        <div class="hero-container">
-            <h1 class="display-3 fw-bold gradient-text">Block Wars</h1>
-            <p class="lead mt-3">In communications and information processing, code is a system of rules to convert information—such as a letter, word, sound, image, or gesture—into another form, sometimes shortened or secret, for communication through a communication channel or storage in a storage medium. An early example is an invention of language, which enabled a person, through speech, to communicate what they thought, saw, heard, or felt to others. But speech limits the range of communication to the distance a voice can carry and limits the audience to those present when the speech is uttered. The invention of writing, which converted spoken language into visual symbols, extended the range of communication across space and time.
-
-                The process of encoding converts information from a source into symbols for communication or storage. Decoding is the reverse process, converting code symbols back into a form that the recipient understands, such as English, Spanish, etc.
-                
-                One reason for coding is to enable communication in places where ordinary plain language, spoken or written, is difficult or impossible. For example, semaphore, where the configuration of flags held by a signaler or the arms of a semaphore tower encodes parts of the message, typically individual letters, and numbers. Another person standing a great distance away can interpret the flags and reproduce the words sent.
-                
-                </p>
-        </div>
+    <!-- Event Name -->
+    <section class="text-center py-5">
+        <h1 class="display-3 fw-bold gradient-text">Block Wars</h1>
     </section>
+
+    <!-- Main Content -->
+    <div class="container pb-5">
+        <div class="row align-items-center g-4">
+            <!-- Image -->
+            <div class="col-md-6 text-center">
+                <img src="3.png" alt="Block Wars Event" class="img-fluid w-100 shadow">
+            </div>
+
+            <!-- About Section -->
+            <div class="col-md-6">
+                <div class="glass-box">
+                    <h2 class="fw-bold gradient-text mb-3">About Block Wars</h2>
+                    <p>
+                        Block Wars is an intense Minecraft building and strategy competition where teams will race against the clock to build, defend, and showcase their creativity within a themed challenge.
+                        Participants will be tested on teamwork, time management, technical building skills, and innovative design under pressure.
+                        Whether you're a redstone genius or a creative builder, Block Wars promises an engaging, fun, and competitive experience for Minecraft enthusiasts.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event Details -->
+        <div class="glass-box mt-4">
+            <h2 class="fw-bold gradient-text mb-3">Event Details</h2>
+            <ul>
+                <li><strong>Date:</strong> 14th August 2025</li>
+                <li><strong>Time:</strong> 12:00 PM - 3:00 PM</li>
+                <li><strong>Venue:</strong> Computer Lab, DPS Bangalore South</li>
+                <li><strong>Team Size:</strong> 2-3 participants per team</li>
+            </ul>
+            <a href="https://forms.gle/yourregistrationlink" target="_blank" class="btn btn-outline-info mt-2">Register Now</a>
+        </div>
+
+        <!-- Rules Section -->
+        <div class="glass-box mt-4 mb-5">
+            <h2 class="fw-bold gradient-text mb-3">Rules</h2>
+            <ul>
+                <li>The theme will be announced at the start of the event.</li>
+                <li>Participants must bring their own Minecraft accounts if required.</li>
+                <li>Judgment will be based on creativity, theme relevance, technical complexity, and teamwork.</li>
+                <li>No external mods allowed unless specified by the organizers.</li>
+                <li>Maintain decorum and fair play throughout the competition.</li>
+            </ul>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center p-3">
@@ -95,7 +141,7 @@
     <!-- Bootstrap Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Particles initialization -->
+    <!-- Particles Initialization -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             if (window.particlesJS) {

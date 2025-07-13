@@ -11,6 +11,9 @@
     <!-- particles.js -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
     <style>
         body {
             background-color: #000;
@@ -42,48 +45,107 @@
         .nav-link.active {
             color: #00FFFF !important;
         }
-        .hero-container {
-            padding: 2rem;
-        }
         .gradient-text {
             background: linear-gradient(90deg, #00ffff, #1f51ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .content-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid #00ffff40;
+            border-radius: 12px;
+            padding: 1.5rem;
+            backdrop-filter: blur(4px);
+        }
+        .register-btn {
+            background: linear-gradient(90deg, #00ffff, #1f51ff);
+            border: none;
+            color: #000;
+            font-weight: bold;
+        }
+        .register-btn:hover {
+            opacity: 0.9;
+        }
     </style>
 </head>
 <body>
-    <!-- Particles background -->
+    <!-- Particles Background -->
     <div id="particles-js" style="position: fixed; width: 100%; height: 100%; z-index: -1;"></div>
 
-     <!-- Header -->
-     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand gradient-text mb-3 fs-4" href="#">Tech Sprint</a>
+            
+                <a class="navbar-brand gradient-text fs-4" href="index.html">Tech Sprint</a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link fs-4" href="index.html#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link fs-4" href="index.html#events">Events</a></li>
-                    <li class="nav-item"><a class="nav-link fs-4" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#events">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section style="font-family: Michroma, sans-serif" class="vh-100 d-flex align-items-center justify-content-center text-center">
-        <div class="hero-container">
-            <h1 class="display-3 fw-bold gradient-text">Code Jam</h1>
-            <p class="lead mt-3">In communications and information processing, code is a system of rules to convert information—such as a letter, word, sound, image, or gesture—into another form, sometimes shortened or secret, for communication through a communication channel or storage in a storage medium. An early example is an invention of language, which enabled a person, through speech, to communicate what they thought, saw, heard, or felt to others. But speech limits the range of communication to the distance a voice can carry and limits the audience to those present when the speech is uttered. The invention of writing, which converted spoken language into visual symbols, extended the range of communication across space and time.
+    <!-- Hero Heading -->
+    <section class="text-center my-5">
+        <h1 class="display-3 fw-bold gradient-text">Code Jam</h1>
+    </section>
 
-                The process of encoding converts information from a source into symbols for communication or storage. Decoding is the reverse process, converting code symbols back into a form that the recipient understands, such as English, Spanish, etc.
+    <!-- Main Content -->
+    <section class="container my-5">
+        <div class="row g-4 align-items-center">
+            <!-- Left: Image -->
+            <div class="col-lg-6">
                 
-                One reason for coding is to enable communication in places where ordinary plain language, spoken or written, is difficult or impossible. For example, semaphore, where the configuration of flags held by a signaler or the arms of a semaphore tower encodes parts of the message, typically individual letters, and numbers. Another person standing a great distance away can interpret the flags and reproduce the words sent.
-                
-                </p>
+
+
+
+                <img src="2.png" alt="codejam" class="img-fluid rounded-4 shadow">
+
+
+
+
+
+            </div>
+
+            <!-- Right: About -->
+            <div class="col-lg-6">
+                <div class="content-box">
+                    <h2 class="fw-bold gradient-text mb-3">About Code Jam</h2>
+                    <p>
+                        Code Jam is an intense coding contest under Tech Sprint, designed to push your logical thinking, problem-solving, and coding speed to the next level. Participants will tackle algorithmic challenges of varying difficulties, aiming for optimal and clean code within strict time constraints.
+                        <br><br>
+                        The event aims to cultivate competitive coding culture and prepare participants for future hackathons and Olympiads, encouraging them to think analytically while managing time effectively.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Registration Box -->
+        <div class="content-box mt-5 text-center">
+            <h2 class="fw-bold gradient-text mb-3">Event Details & Registration</h2>
+            <p>Date: 14th August 2025 | Venue: Computer Lab, DPS Bangalore South | Individual Event</p>
+            <a href="https://forms.gle/your_registration_form_link" target="_blank" class="btn register-btn btn-lg mt-2">
+                Register Now
+            </a>
+        </div>
+
+        <!-- Rules Box -->
+        <div class="content-box mt-4">
+            <h2 class="fw-bold gradient-text mb-3">Rules</h2>
+            <ul>
+                <li>Individual participation only.</li>
+                <li>Laptops will be provided; participants may bring their own if preferred.</li>
+                <li>Internet access will be provided solely for event tasks.</li>
+                <li>Using online code or plagiarism will result in disqualification.</li>
+                <li>Judging based on correctness, efficiency, and coding style.</li>
+                <li>Time limit will be strictly enforced for each challenge.</li>
+            </ul>
         </div>
     </section>
 
@@ -95,7 +157,7 @@
     <!-- Bootstrap Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Particles initialization -->
+    <!-- Particles Initialization -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             if (window.particlesJS) {
